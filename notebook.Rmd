@@ -17,3 +17,22 @@ When you save the notebook, an HTML file containing the code and output will be 
 
 The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
 
+
+```{r}
+# Install from CRAN with install.packages()
+install.packages(c("magrittr", "gprofiler2"))
+
+# Install from bioconductor with BiocManager
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(c("GenomicRanges","genomation","BSgenome.Hsapiens.UCSC.hg19","org.Hs.eg.db","TxDb.Hsapiens.UCSC.hg19.knownGene","biomaRt","AnnotationHub","BSgenome.Mmusculus.UCSC.mm10","ChIPseeker","clusterProfiler"))
+
+# Install from github with the devtools package - we don't need these packages this is just for demonstration.
+#install.packages("devtools")
+#devtools::install_github("thomasp85/patchwork")
+```
+
+```{r}
+library(magrittr)
+```
+
